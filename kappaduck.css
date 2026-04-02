@@ -17,7 +17,8 @@
   --quack-gray-700: #2c2c2a;
   --quack-gray-900: #1a1a1a;
 
-  --quack-purple-50: #eeedfe;
+  --quack-purple-50: #f7f6ff;
+  --quack-purple-100: #eeedfe;
   --quack-purple-200: #afa9ec;
   --quack-purple-400: #7f77dd;
   --quack-purple-600: #534ab7;
@@ -28,23 +29,28 @@
   --quack-teal-200: #5dcaa5;
   --quack-teal-400: #1d9e75;
   --quack-teal-600: #0f6e56;
-  --quack-teal-800: #084f41;
+  --quack-teal-800: #085041;
   --quack-teal-900: #04201a;
 
   /* default color */
   --quack-background: light-dark(var(--quack-purple-50), var(--quack-base-900));
   --quack-surface: light-dark(white, var(--quack-base-800));
-  --quack-elevated: light-dark(var(--quack-purple-50), var(--quack-base-700));
+  --quack-elevated: light-dark(var(--quack-purple-100), var(--quack-base-700));
 
-  --quack-primary-text: light-dark(var(--quack-base-700), var(--quack-purple-50));
-  --quack-secondary-text: light-dark(var(--quack-purple-600), var(--quack-gray-400));
-  --quack-muted-text: light-dark(var(--quack-gray-400), var(--quack-gray-600));
+  --quack-primary-text: light-dark(var(--quack-base-700), var(--quack-purple-100));
+  --quack-secondary-text: light-dark(var(--quack-purple-400), var(--quack-gray-100));
+  --quack-muted-text: light-dark(var(--quack-gray-600), var(--quack-gray-400));
+  --quack-accent: var(--quack-teal-400);
+  --quack-accent-text: var(--quack-teal-200);
 
   /* Border */
-  --quack-border-color: light-dark(hsl(from var(--quack-purple-600) h s l / 0.15), hsl(from var(--quack-purle-200) h s l / 0.15));
+  --quack-border-200: light-dark(hsl(from var(--quack-purple-600) h s l / 0.15), hsl(from var(--quack-purple-200) h s l / 0.15));
+  --quack-border-400: light-dark(hsl(from var(--quack-purple-600) h s l / 0.3), hsl(from var(--quack-purple-200) h s l / 0.3));
   --quack-radius-sm: 4px;
   --quack-radius-md: 8px;
   --quack-radius-lg: 12px;
+  --quack-radius-xl: 16px;
+  --quack-raidus-pill: 99px;
 
   /* Scaling & Font */
   --quack-text-xs: 0.75rem;
@@ -86,6 +92,7 @@ html {
   -moz-text-size-adjust: none;
   -webkit-text-size-adjust: none;
   text-size-adjust: none;
+  color-scheme: dark light;
 
   &:focus-within {
     scroll-behavior: smooth;
