@@ -50,7 +50,7 @@
   --quack-radius-md: 8px;
   --quack-radius-lg: 12px;
   --quack-radius-xl: 16px;
-  --quack-raidus-pill: 99px;
+  --quack-radius-pill: 99px;
 
   /* Scaling & Font */
   --quack-text-xs: 0.75rem;
@@ -144,9 +144,10 @@ h4 {
   text-wrap: balance;
 }
 
-a:not([class]) {
+a {
+  text-decoration: none;
   text-decoration-skip-ink: auto;
-  color: currentColor
+  color: currentColor;
 }
 
 img,
