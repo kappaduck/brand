@@ -78,6 +78,8 @@
   --quack-space-8: 32px;
   --quack-space-12: 48px;
   --quack-space-16: 64px;
+
+  interpolate-size: allow-keywords;
 }
 
 @supports (font-variation-settings: normal) {
@@ -99,6 +101,7 @@ html {
   -webkit-text-size-adjust: none;
   text-size-adjust: none;
   color-scheme: dark light;
+  scrollbar-gutter: stable;
 
   &:focus-within {
     scroll-behavior: smooth;
@@ -129,7 +132,7 @@ body {
   color: var(--quack-primary-text);
   font-size: var(--quack-text-md);
   line-height: 1.6;
-  min-height: 100vh;
+  min-height: 100svh;
   transition: background .2s, color .2s;
 }
 
