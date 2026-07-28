@@ -19,6 +19,18 @@ Add the stylesheet to your HTML:
 <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
 ```
 
+### 3. Load the Jetbrains Font
+
+```html
+<link rel="stylesheet" href="https://fonts.cdnfonts.com/css/jetbrains-mono">
+```
+
+### 4. Load the Bootstrap Icons
+
+```html
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+```
+
 ## Credits
 
 - [Inter font](https://rsms.me/inter/) by Rasmus Andersson
