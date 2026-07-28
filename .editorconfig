@@ -7,3 +7,9 @@ trim_trailing_whitespace = true
 
 [*.{css,js}]
 indent_size = 2
+
+[*.{html,svg}]
+indent_size = 2
+
+[*.{yaml,yml}]
+indent_size = 2
