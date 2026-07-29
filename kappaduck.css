@@ -1038,9 +1038,57 @@ mark {
     translate: -50% 0;
   }
 
-  &[data-tooltip-pos='bottom']::after {
+  &[data-tooltip-position='bottom']::after {
     bottom: auto;
     top: calc(100% + 8px);
+  }
+
+  &[data-tooltip-position='right-anchored']::after {
+    left: auto;
+    right: 0;
+    translate: 0 4px;
+  }
+
+  &[data-tooltip-position='right-anchored']:hover::after,
+  &[data-tooltip-position='right-anchored']:focus-visible::after {
+    translate: 0 0;
+  }
+
+  &[data-tooltip-position='left-anchored']::after {
+    left: 0;
+    right: auto;
+    translate: 0 4px;
+  }
+
+  &[data-tooltip-position='left-anchored']:hover::after,
+  &[data-tooltip-position='left-anchored']:focus-visible::after {
+    translate: 0 0;
+  }
+
+  &[data-tooltip-position='right-anchored-bottom']::after {
+    bottom: auto;
+    top: calc(100% + 8px);
+    left: auto;
+    right: 0;
+    translate: 0 -4px;
+  }
+
+  &[data-tooltip-position='right-anchored-bottom']:hover::after,
+  &[data-tooltip-position='right-anchored-bottom']:focus-visible::after {
+    translate: 0 0;
+  }
+
+  &[data-tooltip-position='left-anchored-bottom']::after {
+    bottom: auto;
+    top: calc(100% + 8px);
+    left: 0;
+    right: auto;
+    translate: 0 -4px;
+  }
+
+  &[data-tooltip-position='left-anchored-bottom']:hover::after,
+  &[data-tooltip-position='left-anchored-bottom']:focus-visible::after {
+    translate: 0 0;
   }
 }
 
