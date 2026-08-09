@@ -279,7 +279,7 @@ hr {
   }
 
   &:disabled,
-  &[aria-disabled='true'] {
+  &[aria-disabled] {
     opacity: 0.5;
     cursor: not-allowed;
     filter: none;
@@ -433,11 +433,11 @@ hr {
     background: var(--quack-sunken);
   }
 
-  &[aria-invalid='true'] {
+  &[aria-invalid] {
     border-color: var(--quack-danger);
   }
 
-  &[aria-invalid='true']:focus {
+  &[aria-invalid]:focus {
     box-shadow: 0 0 0 2px var(--quack-danger-soft);
   }
 }
@@ -734,7 +734,7 @@ hr {
   }
 
   &:disabled,
-  &[aria-disabled='true'] {
+  &[aria-disabled] {
     opacity: 0.5;
     cursor: not-allowed;
     filter: none;
@@ -1355,7 +1355,7 @@ mark {
     }
 
     &:disabled,
-    &[aria-disabled='true'] {
+    &[aria-disabled] {
       opacity: 0.4;
       cursor: not-allowed;
       background: none;
@@ -1645,7 +1645,7 @@ mark {
     cursor: pointer;
 
     &:hover,
-    &[aria-selected='true'] {
+    &[aria-selected] {
       background: var(--quack-elevated);
     }
 
