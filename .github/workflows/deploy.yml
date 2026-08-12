@@ -13,7 +13,7 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
 
       - name: Point stylesheet to CDN
         run: sed -i "s#\.\./kappaduck\.min\.css#https://cdn.jsdelivr.net/gh/kappaduck/brand@${{ github.ref_name }}/kappaduck.min.css#" src/index.html
