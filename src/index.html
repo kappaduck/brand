@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>KappaDuck - Component library</title>
+
+  <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
+  <link rel="preconnect" href="https://rsms.me/" />
+  <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+  <link rel="stylesheet" href="https://fonts.cdnfonts.com/css/jetbrains-mono">
+  <link rel="stylesheet" href="assets/app.css">
+  <link rel="stylesheet" href="../kappaduck.min.css">
+</head>
+
+<body id="quack-app" class="theme-dark">
+  <header>
+    <div class="brand">
+      <img src="assets/kappaduck.svg" alt="KappaDuck logo" class="logo">
+      <div class="title">
+        <span>Kappa<span class="accent">Duck</span></span>
+        <small>Component library</small>
+      </div>
+    </div>
+    <div class="quack-segmented" role="group" aria-label="Theme">
+      <input type="radio" name="theme" id="theme-light" value="light" />
+      <label class="quack-segmented-seg" for="theme-light"><i class="bi bi-sun"></i> Light</label>
+      <input type="radio" name="theme" id="theme-dark" value="dark" checked />
+      <label class="quack-segmented-seg" for="theme-dark"><i class="bi bi-moon"></i> Dark</label>
+      <input type="radio" name="theme" id="theme-system" value="system" />
+      <label class="quack-segmented-seg" for="theme-system"><i class="bi bi-circle-half"></i> System</label>
+    </div>
+  </header>
+  <main>
+    <div class="description">
+      <h1>Component gallery</h1>
+      <p>
+        A single-stylesheet component system for any websites. Every component below is styled
+        purely by <code>kappaduck.css</code>.
+      </p>
+    </div>
+
+    <section>
+      <div class="head">
+        <div class="title">Color tokens</div>
+        <span class="class">--quack-*</span>
+      </div>
+      <div class="stack">
+        <div>
+          <div class="subtitle">Surfaces</div>
+          <div class="grid-4">
+            <div class="swatch">
+              <div class="box" style="background:var(--quack-background);"></div>
+              <span class="name">background</span>
+            </div>
+            <div class="swatch">
+              <div class="box" style="background:var(--quack-surface);"></div>
+              <span class="name">surface</span>
+            </div>
+            <div class="swatch">
+              <div class="box" style="background:var(--quack-elevated);"></div>
+              <span class="name">elevated</span>
+            </div>
+            <div class="swatch">
+              <div class="box" style="background:var(--quack-sunken);"></div>
+              <span class="name">sunken</span>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="subtitle">Brand &amp; feedback</div>
+          <div class="grid-4">
+            <div class="swatch">
+              <div class="box" style="background:var(--quack-primary); border-color:transparent;"></div>
+              <span class="name">primary</span>
+            </div>
+            <div class="swatch">
+              <div class="box" style="background:var(--quack-accent); border-color:transparent;"></div>
+              <span class="name">accent</span>
+            </div>
+            <div class="swatch">
+              <div class="box" style="background:var(--quack-danger-solid); border-color:transparent;">
+              </div>
+              <span class="name">danger</span>
+            </div>
+            <div class="swatch">
+              <div class="box" style="background:var(--quack-warning); border-color:transparent;"></div>
+              <span class="name">warning</span>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="subtitle">Text</div>
+          <div class="text-box">
+            <span class="quack-text-primary" style="font-weight: 600;">Primary &mdash; the quick brown
+              fox</span>
+            <span class="quack-text-secondary">Secondary &mdash; the quick brown fox</span>
+            <span class="quack-text-muted">Muted &mdash; the quick brown fox</span>
+            <span class="quack-text-accent">Accent &mdash; the quick brown fox</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="head">
+        <div class="title">Typography &amp; highlight</div>
+        <span class="class">.quack-link &middot; mark &middot; .quack-highlight</span>
+      </div>
+      <div class="stack">
+        <h1 style="font-size:var(--quack-text-xxl); font-weight:700;">Heading one</h1>
+        <h2 style="font-size:var(--quack-text-xl); font-weight:700;">Heading two</h2>
+        <p class="quack-text-secondary" style="line-height: 1.6;">
+          Body copy in the secondary tone, legible without shouting.
+          <a class="quack-link" href="#">Here is an inline link</a> inside a paragraph.
+        </p>
+        <p class="quack-text-secondary" style="line-height:1.9;">
+          The pond report shows a <mark>32% rise in ripples</mark> this quarter, with
+          <span class="quack-highlight quack-highlight-accent">record migration</span>
+          and a <span class="quack-highlight quack-highlight-primary">new nesting record</span>.
+        </p>
+      </div>
+    </section>
+
+    <section>
+      <div class="head">
+        <div class="title">Buttons</div>
+        <span class="class">.quack-btn</span>
+      </div>
+      <div class="stack">
+        <div class="row">
+          <button class="quack-btn quack-btn-primary">Primary</button>
+          <button class="quack-btn quack-btn-accent">Accent</button>
+          <button class="quack-btn quack-btn-secondary">Secondary</button>
+          <button class="quack-btn quack-btn-ghost">Ghost</button>
+          <button class="quack-btn quack-btn-danger">Danger</button>
+        </div>
+        <div class="row">
+          <button class="quack-btn quack-btn-primary quack-btn-sm">Small</button>
+          <button class="quack-btn quack-btn-primary">Medium</button>
+          <button class="quack-btn quack-btn-primary quack-btn-lg">Large</button>
+          <button class="quack-btn quack-btn-accent quack-btn-pill">Pill</button>
+          <button class="quack-btn quack-btn-secondary" disabled>Disabled</button>
+        </div>
+        <button class="quack-btn quack-btn-primary quack-btn-block">
+          <i class="bi bi-box-arrow-up-right"></i>
+          Full width
+        </button>
+      </div>
+    </section>
+
+    <section>
+      <div class="head">
+        <div class="title">Icon buttons</div>
+        <span class="class">.quack-icon-btn</span>
+      </div>
+      <div class="stack">
+        <div class="row">
+          <button class="quack-icon-btn quack-btn-primary" aria-label="Search"><i class="bi bi-search"></i></button>
+          <button class="quack-icon-btn quack-btn-accent" aria-label="Add"><i class="bi bi-plus-lg"></i></button>
+          <button class="quack-icon-btn quack-btn-secondary" aria-label="Settings"><i class="bi bi-gear"></i></button>
+          <button class="quack-icon-btn quack-btn-ghost" aria-label="More"><i class="bi bi-three-dots"></i></button>
+          <button class="quack-icon-btn quack-btn-danger" aria-label="Delete"><i class="bi bi-trash"></i></button>
+          <button class="quack-icon-btn quack-btn-secondary quack-icon-btn-pill" aria-label="Favorite"><i class="bi bi-heart"></i></button>
+        </div>
+        <div class="row">
+          <button class="quack-icon-btn quack-icon-btn-sm" aria-label="Small"><i class="bi bi-star"></i></button>
+          <button class="quack-icon-btn quack-icon-btn" aria-label="Medium"><i class="bi bi-star"></i></button>
+          <button class="quack-icon-btn quack-icon-btn-lg" aria-label="Large"><i class="bi bi-star"></i></button>
+        </div>
+        <div>
+          <div class="subtitle">With a text label via <code>.quack-icon-btn-label</code></div>
+          <div class="row">
+            <button class="quack-icon-btn quack-btn-primary">
+              <i class="bi bi-download"></i>
+              <span class="quack-icon-btn-label">Download</span>
+            </button>
+            <button class="quack-icon-btn">
+              <i class="bi bi-pencil"></i>
+              <span class="quack-icon-btn-label">Edit</span>
+            </button>
+            <button class="quack-icon-btn quack-btn-danger">
+              <i class="bi bi-trash"></i>
+              <span class="quack-icon-btn-label">Trash</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="head">
+        <div class="title">Spinner</div>
+        <span class="class">.quack-spinner</span>
+      </div>
+      <div class="row" style="gap:var(--quack-space-5);">
+        <span class="quack-spinner quack-spinner-sm"></span>
+        <span class="quack-spinner"></span>
+        <span class="quack-spinner quack-spinner-lg"></span>
+        <span class="quack-spinner quack-spinner-accent"></span>
+        <button class="quack-btn quack-btn-primary">
+          <span class="quack-spinner quack-spinner-sm"></span>
+          Loading...
+        </button>
+      </div>
+    </section>
+
+    <section>
+      <div class="head">
+        <div class="title">Form fields</div>
+        <span class="class">.quack-field &middot; .quack-input &middot; .quack-select &middot; .quack-text-area
+          &middot; .quack-combox</span>
+      </div>
+      <div class="grid-2">
+        <div class="stack">
+          <div class="quack-field">
+            <label for="g-email" class="quack-label">Email</label>
+            <input id="g-email" class="quack-input" type="email" placeholder="duck@pond.io" />
+            <span class="quack-hint">We'll never share it.</span>
+          </div>
+          <div class="quack-field">
+            <label for="g-name" class="quack-label quack-label-optional">Display name</label>
+            <input id="g-name" class="quack-input" type="text" value="KappaDuck" />
+          </div>
+          <div class="quack-field">
+            <label for="g-password" class="quack-label">Password</label>
+            <input id="g-password" class="quack-input" type="password" value="123" aria-invalid />
+            <span class="quack-error">Must be at least 8 characters.</span>
+          </div>
+          <div class="quack-field quack-combobox" style="max-width: 360px;">
+            <label for="g-autocomplete" class="quack-label">Autocomplete</label>
+            <input id="g-autocomplete" class="quack-input" type="text" value="ge" placeholder="Guess a country..." />
+            <ul class="quack-combobox-list">
+              <li class="quack-combobox-option" aria-selected>
+                <i class="bi bi-geo-alt"></i>
+                <span><mark>Ge</mark>rmany</span>
+              </li>
+              <li class="quack-combobox-option">
+                <i class="bi bi-geo-alt"></i>
+                <span><mark>Ge</mark>orgia</span>
+              </li>
+              <li class="quack-combobox-option">
+                <i class="bi bi-geo-alt"></i>
+                <span>Al<mark>ge</mark>ria</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="stack">
+          <div class="quack-field">
+            <label for="g-country" class="quack-label">Country</label>
+            <select id="g-country" class="quack-select">
+              <option>Canada</option>
+              <option>Italy</option>
+              <option>Sweden</option>
+            </select>
+          </div>
+          <div class="quack-field">
+            <label for="g-msg" class="quack-label">Message</label>
+            <textarea id="g-msg" class="quack-textarea" placeholder="Say something…"></textarea>
+          </div>
+          <div class="quack-field">
+            <label for="g-disabled" class="quack-label">Disabled</label>
+            <input id="g-disabled" class="quack-input" type="text" value="Read only" disabled />
+          </div>
+        </div>
+        <div style="height: 120px;"
+          </div>
+    </section>
+
+    <section>
+      <div class="head">
+        <div class="title">Input group</div>
+        <span class="class">.quack-input-group</span>
+      </div>
+      <div class="stack" style="max-width: 400px;">
+        <div class="quack-input-group">
+          <span class="quack-input-group-addon"><i class="bi bi-at"></i></span>
+          <input type="text" class="quack-input" placeholder="username">
+        </div>
+        <div class="quack-input-group">
+          <span class="quack-input-group-addon">https://</span>
+          <input type="text" class="quack-input" placeholder="kappaduck.com">
+          <button class="quack-btn quack-btn-primary">Go</button>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="head">
+        <div class="title">Selection</div>
+        <span class="class">.quack-check &middot; .quack-switch</span>
+      </div>
+      <div class="grid-2">
+        <div class="stack" style="gap:var(--quack-space-3);">
+          <label class="quack-check"><input type="checkbox" checked="checked" /> Subscribe to updates</label>
+          <label class="quack-check"><input type="checkbox" /> Enable notifications</label>
+          <label class="quack-check"><input type="checkbox" disabled="disabled" /> Unavailable option</label>
+          <label class="quack-check"><input type="radio" name="plan" checked="checked" /> Monthly</label>
+          <label class="quack-check"><input type="radio" name="plan" /> Yearly</label>
+        </div>
+        <div class="stack" style="gap:var(--quack-space-3);">
+          <label class="quack-switch"><input type="checkbox" checked="checked" /> Dark mode</label>
+          <label class="quack-switch"><input type="checkbox" /> Compact layout</label>
+          <label class="quack-switch"><input type="checkbox" disabled="disabled" /> Beta features</label>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="head">
+        <div class="title">Badges &amp; chips</div>
+        <span class="class">.quack-badge &middot; .quack-chip</span>
+      </div>
+      <div class="stack">
+        <div class="row">
+          <span class="quack-badge">Default</span>
+          <span class="quack-badge quack-badge-primary">Primary</span>
+          <span class="quack-badge quack-badge-accent">Active</span>
+          <span class="quack-badge quack-badge-warning">Pending</span>
+          <span class="quack-badge quack-badge-danger">Failed</span>
+        </div>
+        <div class="row">
+          <span class="quack-chip">Mallard <button class="quack-chip-remove" aria-label="Remove"><i class="bi bi-x"></i></button></span>
+          <span class="quack-chip quack-chip-accent">Teal <button class="quack-chip-remove" aria-label="Remove"><i
+                class="bi bi-x"></i></button></span>
+          <span class="quack-chip quack-chip-primary">Featured <button class="quack-chip-remove" aria-label="Remove"><i
+                class="bi bi-x"></i></button></span>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="head">
+        <div class="title">Card &amp; alerts</div>
+        <span class="class">.quack-card &middot; .quack-alert</span>
+      </div>
+      <div class="grid-2" style="align-items: start;">
+        <div class="quack-card">
+          <div class="quack-card-header" style="display:flex; align-items:center; justify-content:space-between;">
+            <span>Pond membership</span>
+            <span class="quack-badge quack-badge-accent">Active</span>
+          </div>
+          <div class="quack-card-body">
+            <p class="quack-text-secondary" style="font-size:var(--quack-text-sm); line-height: 1.6;">
+              Unlimited quacks, priority ripples, and a shiny gold beak badge on your profile.
+            </p>
+          </div>
+          <div class="quack-card-footer">
+            <button class="quack-btn quack-btn-sm quack-btn-ghost">Cancel</button>
+            <button class="quack-btn quack-btn-sm quack-btn-primary">Upgrade</button>
+          </div>
+        </div>
+        <div class="stack" style="gap:var(--quack-space-3)">
+          <div class="quack-alert quack-alert-accent">Your changes were saved successfully.</div>
+          <div class="quack-alert quack-alert-warning">Your session expires in 5 minutes.</div>
+          <div class="quack-alert quack-alert-danger">Something went wrong. Please try again.</div>
+          <div class="quack-alert">A neutral, informational note on the elevated surface.</div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="head">
+        <div class="title">Overlays</div>
+        <span class="class">.quack-popover &middot; .quack-dialog &middot; .quack-menu</span>
+      </div>
+      <div class="row">
+        <button class="quack-btn quack-btn-secondary" popovertarget="pop">
+          <i class="bi bi-info-circle"></i>Show popover
+        </button>
+        <div id="pop" popover="auto" class="quack-popover">
+          <strong style="display: block; margin-bottom: 4px;">Quick tip</strong>
+          Popovers use the native Popover API. Click outside to dismiss, no JavaScript required.
+        </div>
+
+        <button class="quack-btn quack-btn-primary" command="show-modal" commandfor="dialog">
+          <i class="bi bi-window-stack"></i>Open dialog
+        </button>
+        <dialog id="dialog" class="quack-dialog">
+          <div class="quack-dialog-header">
+            Delete pond?
+            <button class="quack-icon-btn quack-btn-ghost quack-icon-btn-sm" command="close" commandfor="dialog" aria-label="Close">
+              <i class="bi bi-x-lg"></i>
+            </button>
+          </div>
+          <div class="quack-dialog-body">
+            This action can't be undone. All ripples and nesting records for this pond
+            will be permanently removed.
+          </div>
+          <div class="quack-dialog-footer">
+            <button class="quack-btn quack-btn-ghost" command="close" commandfor="dialog">Cancel</button>
+            <button class="quack-btn quack-btn-primary" command="close" commandfor="dialog">Ok</button>
+          </div>
+        </dialog>
+
+        <button class="quack-btn quack-btn-secondary" popovertarget="menu">
+          <i class="bi bi-list"></i>Actions<i class="bi bi-chevron-down"></i>
+        </button>
+        <div id="menu" popover="auto" class="quack-menu">
+          <div class="quack-menu-label">Manage</div>
+          <button class="quack-menu-item"><i class="bi bi-pencil"></i>Edit pond</button>
+          <button class="quack-menu-item"><i class="bi bi-share"></i>Share</button>
+          <button class="quack-menu-item"><i class="bi bi-download"></i>Export</button>
+          <hr class="quack-menu-separator" />
+          <button class="quack-menu-item quack-menu-item-danger"><i class="bi bi-trash"></i>Delete</button>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="head">
+        <div class="title">Tabs</div>
+        <span class="class">.quack-tabs &middot; .quack-tabs-panel</span>
+      </div>
+      <div class="quack-tabs tabs">
+        <div class="quack-tabs-list">
+          <input id="tab1" class="t1" type="radio" name="tabs" checked />
+          <label for="tab1" class="quack-tabs-tab">Overview</label>
+          <input id="tab2" class="t2" type="radio" name="tabs" />
+          <label for="tab2" class="quack-tabs-tab">Activity</label>
+          <input id="tab3" class="t3" type="radio" name="tabs" />
+          <label for="tab3" class="quack-tabs-tab">Settings</label>
+        </div>
+        <div class="quack-tabs-panels">
+          <div class="quack-tabs-panel">
+            Willow Bank is home to 128 ducks across three nesting zones. Ripple activity is steady this season with a small uptick in
+            migration.
+          </div>
+          <div class="quack-tabs-panel">
+            Latest events: 3 new arrivals, 1 nest relocation, and a pondside feeder refill logged 2 hours ago.
+          </div>
+          <div class="quack-tabs-panel">
+            Configure notifications, membership tier, and pond visibility from here. Changes apply instantly.
+          </div>
+        </div>
+        <p class="note">
+          The stylesheet ships <code>.quack-tabs-panel { display: none }</code>
+          and leaves the show/hide to the consumer. Here it's wired with one
+          <code>:has()</code> rule matching the checked radio to its panel by index.
+        </p>
+      </div>
+    </section>
+
+    <section>
+      <div class="head">
+        <div class="title">Segmented control</div>
+        <span class="class">.quack-segmented</span>
+      </div>
+      <div class="quack-segmented">
+        <input id="seg1" name="seg" type="radio" checked>
+        <label for="seg1" class="quack-segmented-seg">Day</label>
+        <input id="seg2" name="seg" type="radio">
+        <label for="seg2" class="quack-segmented-seg">Week</label>
+        <input id="seg3" name="seg" type="radio">
+        <label for="seg3" class="quack-segmented-seg">Month</label>
+      </div>
+    </section>
+
+    <section>
+      <div class="head">
+        <div class="title">Tables</div>
+        <span class="class">.quack-table &middot; .quack-table-wrap &middot; .quack-table-compact</span>
+      </div>
+      <div class="stack" style="gap: var(--quack-space-6)">
+        <div>
+          <div class="subtitle">
+            Striped, inside <code>.quack-table-wrap</code> (rounded frame + horizontal scroll)
+          </div>
+          <div class="quack-table-wrap">
+            <table class="quack-table quack-table-striped">
+              <thead>
+                <tr>
+                  <th>Pond</th>
+                  <th>Ducks</th>
+                  <th>Region</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Willow Bank</td>
+                  <td>128</td>
+                  <td>North</td>
+                  <td><span class="quack-badge quack-badge-accent">Active</span></td>
+                </tr>
+                <tr>
+                  <td>Reed Marsh</td>
+                  <td>64</td>
+                  <td>East</td>
+                  <td><span class="quack-badge quack-badge-warning">Pending</span></td>
+                </tr>
+                <tr>
+                  <td>Stone Creek</td>
+                  <td>0</td>
+                  <td>South</td>
+                  <td><span class="quack-badge quack-badge-danger">Closed</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div>
+          <div class="subtitle">Tighter row padding, wrapped for a rounded frame using <code>.quack-table-compact</code></div>
+          <div class="quack-table-wrap">
+            <table class="quack-table quack-table-compact">
+              <thead>
+                <tr>
+                  <th>Pond</th>
+                  <th>Ducks</th>
+                  <th>Region</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Willow Bank</td>
+                  <td>128</td>
+                  <td>North</td>
+                  <td><span class="quack-badge quack-badge-accent">Active</span></td>
+                </tr>
+                <tr>
+                  <td>Reed Marsh</td>
+                  <td>64</td>
+                  <td>East</td>
+                  <td><span class="quack-badge quack-badge-warning">Pending</span></td>
+                </tr>
+                <tr>
+                  <td>Stone Creek</td>
+                  <td>0</td>
+                  <td>South</td>
+                  <td><span class="quack-badge quack-badge-danger">Closed</span></td>
+                </tr>
+                <tr>
+                  <td>Cedar Pool</td>
+                  <td>212</td>
+                  <td>West</td>
+                  <td><span class="quack-badge quack-badge-accent">Active</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="head">
+        <div class="title">Toasts</div>
+        <span class="class">.quack-toast</span>
+      </div>
+      <div class="stack" style="gap: var(--quack-space-3); max-width: 400px;">
+        <div class="quack-toast quack-toast-accent">
+          <i class="bi bi-check-circle-fill quack-toast-icon"></i>
+          <div class="quack-toast-body">
+            <span class="quack-toast-title">Saved</span>
+            <span class="quack-text-muted">Your pond settings were updated.</span>
+          </div>
+          <button class="quack-icon-btn quack-btn-ghost quack-icon-btn-sm quack-toast-close" aria-label="Dismiss">
+            <i class="bi bi-x-lg"></i>
+          </button>
+        </div>
+
+        <div class="quack-toast quack-toast-danger">
+          <i class="bi bi-exclamation-octagon-fill quack-toast-icon"></i>
+          <div class="quack-toast-body">
+            <span class="quack-toast-title">Upload failed</span>
+            <span class="quack-text-muted">Check your connection and retry.</span>
+          </div>
+          <button class="quack-icon-btn quack-btn-ghost quack-icon-btn-sm quack-toast-close" aria-label="Dismiss">
+            <i class="bi bi-x-lg"></i>
+          </button>
+        </div>
+
+        <div class="quack-toast quack-toast-warning">
+          <i class="bi bi-exclamation-triangle-fill quack-toast-icon"></i>
+          <div class="quack-toast-body">
+            <span class="quack-toast-title">Heads up</span>
+            <span class="quack-text-muted">Migration window opens tonight.</span>
+          </div>
+          <button class="quack-icon-btn quack-btn-ghost quack-icon-btn-sm quack-toast-close" aria-label="Dismiss">
+            <i class="bi bi-x-lg"></i>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="head">
+        <div class="title">Progress</div>
+        <span class="class">.quack-progress</span>
+      </div>
+      <div class="stack" style="gap: var(--quack-space-3);">
+        <div class="quack-progress">
+          <div class="quack-progress-bar" style="width: 38%;"></div>
+        </div>
+        <div class="quack-progress quack-progress-accent">
+          <div class="quack-progress-bar" style="width: 72%;"></div>
+        </div>
+        <div class="quack-progress quack-progress-indeterminate">
+          <div class="quack-progress-bar"></div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="head">
+        <div class="title">Navigation</div>
+        <span class="class">.quack-breadcrumb &middot; .quack-pagination</span>
+      </div>
+      <div class="stack">
+        <ol class="quack-breadcrumb">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Ponds</a></li>
+          <li aria-current="page">Willow Bank</li>
+        </ol>
+        <div class="quack-pagination">
+          <button class="quack-pagination-item" aria-disabled><i class="bi bi-chevron-left"></i></button>
+          <a href="#" class="quack-pagination-item">1</a>
+          <a href="#" class="quack-pagination-item" aria-current="page">2</a>
+          <a href="#" class="quack-pagination-item">3</a>
+          <span class="quack-pagination-ellipsis">...</span>
+          <a href="#" class="quack-pagination-item">9</a>
+          <button class="quack-pagination-item"><i class="bi bi-chevron-right"></i></button>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="head">
+        <div class="title">Skeleton</div>
+        <span class="class">.quack-skeleton</span>
+      </div>
+      <div class="row" style="gap: var(--quack-space-4); align-items: center;">
+        <span class="quack-skeleton quack-skeleton-circle"></span>
+        <div style="flex:1; display: flex; flex-direction: column; gap:8px">
+          <span class="quack-skeleton quackskeleton-title"></span>
+          <span class="quack-skeleton quackskeleton-text"></span>
+          <span class="quack-skeleton quackskeleton-text" style="width: 70%;"></span>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="head">
+        <div class="title">Accordion</div>
+        <span class="class">.quack-accordion</span>
+      </div>
+      <div>
+        <details class="quack-accordion" open>
+          <summary>What is a pond membership?</summary>
+          <div class="quack-accordion-body">
+            Unlimited quacks, priority ripples, and a gold beak badge on your
+            profile.
+          </div>
+        </details>
+        <details class="quack-accordion">
+          <summary>Can I migrate between ponds?</summary>
+          <div class="quack-accordion-body">
+            Migration is free once per season and keeps your nesting records.
+          </div>
+        </details>
+      </div>
+    </section>
+
+    <section>
+      <div class="head">
+        <div class="title">Tooltip &amp; divider</div>
+        <span class="class">[data-tooltip] &middot; .quack-divider</span>
+      </div>
+      <div class="stack">
+        <div class="row">
+          <button class="quack-icon-btn" data-tooltip="Refresh data" aria-label="Refresh">
+            <i class="bi bi-arrow-clockwise"></i>
+          </button>
+          <button class="quack-btn quack-btn-secondary" data-tooltip="Quack!" data-tooltip-position="bottom">Bottom</button>
+          <button class="quack-btn quack-btn-secondary" data-tooltip="Quack!" data-tooltip-position="top-end">Top end</button>
+          <button class="quack-btn quack-btn-secondary" data-tooltip="Quack!" data-tooltip-position="top-start">Top start</button>
+          <button class="quack-btn quack-btn-secondary" data-tooltip="Quack!" data-tooltip-position="bottom-end">Bottom end</button>
+          <button class="quack-btn quack-btn-secondary" data-tooltip="Quack!" data-tooltip-position="bottom-start">Bottom start</button>
+        </div>
+        <hr class="quack-divider" />
+        <div class="quack-divider-label">or continue with</div>
+      </div>
+    </section>
+
+    <section>
+      <div class="head">
+        <div class="title">Image frames</div>
+        <span class="class">.quack-frame &middot; .quack-gallery</span>
+      </div>
+      <div class="stack" style="gap: var(--quack-space-5);">
+        <div class="quack-gallery">
+          <div class="quack-frame quack-frame-square image"><i class="bi bi-image"></i></div>
+          <div class="quack-frame quack-frame-square image"><i class="bi bi-image"></i></div>
+          <div class="quack-frame quack-frame-square image"><i class="bi bi-image"></i></div>
+          <div class="quack-frame quack-frame-square image"><i class="bi bi-image"></i></div>
+        </div>
+        <div class="grid-2">
+          <div>
+            <div class="subtitle"><code>.quack-frame-video</code> (16 / 9)</div>
+            <div class="quack-frame quack-frame-video video">
+              <i class="bi bi-play-btn"></i>
+            </div>
+          </div>
+          <div>
+            <div class="subtitle"><code>.quack-frame-portrait</code> (3 / 4)</div>
+            <div class="quack-frame quack-frame-portrait portrait"><i class="bi bi-person"></i></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="assets/app.js"></script>
+</body>
+
+</html>
