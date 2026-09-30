@@ -19,7 +19,7 @@ jobs:
         run: sed -i "s#\.\./kappaduck\.min\.css#https://cdn.jsdelivr.net/gh/kappaduck/brand@${{ github.ref_name }}/kappaduck.min.css#" src/index.html
 
       - name: Deploy to Cloudflare
-        uses: cloudflare/wrangler-action@v4.0.0
+        uses: cloudflare/wrangler-action@v4.1.3
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
